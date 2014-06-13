@@ -1,0 +1,10 @@
+.idea
+.bundle
+.sass-cache
+.DS_Store
+Gemfile.lock
+node_modules
+vendor_bower
+public
+theme
+bower_components
