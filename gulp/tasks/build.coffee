@@ -12,7 +12,6 @@ isGzip = gutil.env.gzip?
 # 監視を行わないビルドタスク
 gulp.task 'build', ->
 
-  beforeBuildTask = ['clean', 'bower']
   defaultBuildTask = ['library', 'imagemin', 'jade', 'compass', 'browserify']
 
   # 本番用
@@ -26,9 +25,9 @@ gulp.task 'build', ->
 
     # publicの圧縮をかけるか否か
     if isGzip
-      return runSequence beforeBuildTask, defaultBuildTask, afterBuildTask, 'gzip'
+      return runSequence 'clean', 'bower', defaultBuildTask, afterBuildTask, 'gzip'
 
-    runSequence beforeBuildTask, defaultBuildTask, afterBuildTask
+    runSequence 'clean', 'bower', defaultBuildTask, afterBuildTask
 
   else
-    runSequence beforeBuildTask, defaultBuildTask
+    runSequence 'clean', 'bower', defaultBuildTask
