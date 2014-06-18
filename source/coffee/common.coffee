@@ -2,7 +2,6 @@
 class Common
 
   constructor: ->
-    alert 'load'
 
   log: (obj)->
     console.log obj

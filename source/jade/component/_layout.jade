@@ -7,12 +7,11 @@ html(lang="ja")
 
       block meta
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width")
         meta(name="format-detection", content="telephone=no")
         //- link(rel="shortcut icon", href="favicon.ico")
 
       block viewport
-        meta(name='viewport',content='width=1280,initial-scale=1,user-scalable=no')
+        meta(name="viewport", content="width=device-width")
 
 
       //- load common assets
@@ -34,7 +33,7 @@ html(lang="ja")
 
     //- フッター
     block footer
-      include _header
+      include _footer
 
     block pageJS
       // build:js script.min.js

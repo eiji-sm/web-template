@@ -10,6 +10,7 @@ gulp.task 'compass', ->
     css: 'public'
     sass: 'source/sass'
     image: 'source/image'
+    import_path: 'source/sass/modules'
 
   gulp
   .src 'source/sass/*.sass'
