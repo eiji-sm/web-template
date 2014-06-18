@@ -7,7 +7,7 @@ handleErrors = require '../utils/handle_errors'
 # Sass(compass)のコンパイルとminify
 gulp.task 'compass', ->
   compassOption =
-    css: 'source/css'
+    css: 'public'
     sass: 'source/sass'
     image: 'source/image'
 
