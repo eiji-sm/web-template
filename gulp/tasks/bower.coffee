@@ -1,16 +1,39 @@
 gulp = require 'gulp'
-gutil = require 'gulp-util'
-bower = require 'gulp-bower-files'
-flatten = require 'gulp-flatten'
-uglify = require 'gulp-uglify'
-cond = require 'gulp-if'
 
-
-# 環境変数 gulp --production
-isProduction = gutil.env.production?
 
 gulp.task 'bower', ->
-  bower()
-  .pipe cond isProduction, uglify(preserveComments: 'some')
-  .pipe flatten()
-  .pipe gulp.dest('vendor_bower')
+
+  # angular
+  gulp
+  .src 'bower_components/angular/angular.min.js'
+  .pipe gulp.dest('vendor_bower/angular/')
+
+  # bootstrap-sass
+  gulp
+  .src 'bower_components/bootstrap-sass-official/vendor/assets/**'
+  .pipe gulp.dest('vendor_bower/bootstrap/')
+
+  # jquery
+  gulp
+  .src 'bower_components/jquery/dist/jquery.min.js'
+  .pipe gulp.dest('vendor_bower/jquery/')
+
+  # jquery.easing
+  gulp
+  .src 'bower_components/jquery.easing/js/jquery.easing.min.js'
+  .pipe gulp.dest('vendor_bower/jquery.easing/')
+
+  # lodash
+  gulp
+  .src 'bower_components/lodash/dist/lodash.min.js'
+  .pipe gulp.dest('vendor_bower/lodash/')
+
+  # modernizr
+  gulp
+  .src 'bower_components/modernizr/modernizr.js'
+  .pipe gulp.dest('vendor_bower/modernizr/')
+
+  # moment
+  gulp
+  .src 'bower_components/moment/min/moment.min.js'
+  .pipe gulp.dest('vendor_bower/moment/')
