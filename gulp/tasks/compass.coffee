@@ -13,7 +13,7 @@ gulp.task 'compass', ->
     import_path: 'source/sass/modules'
 
   gulp
-  .src 'source/sass/**/*.sass'
+  .src ['source/sass/**/*.sass','source/sass/*.scss']
   .pipe compass(compassOption)
   .on 'error', handleErrors
   .pipe minifyCSS()
