@@ -5,6 +5,6 @@ jade = require 'gulp-jade'
 gulp.task 'jade', ->
 
   gulp
-  .src 'source/jade/*.jade'
+  .src ['source/jade/**/*.jade','!source/jade/**/_*.jade'], base:'source/jade'
   .pipe jade()
   .pipe gulp.dest('public/')

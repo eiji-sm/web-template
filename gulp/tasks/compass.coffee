@@ -2,7 +2,7 @@ gulp = require 'gulp'
 compass = require 'gulp-compass'
 minifyCSS = require 'gulp-minify-css'
 handleErrors = require '../utils/handle_errors'
-
+prefixer = require 'gulp-autoprefixer'
 
 # Sass(compass)のコンパイルとminify
 gulp.task 'compass', ->
@@ -13,7 +13,7 @@ gulp.task 'compass', ->
     import_path: 'source/sass/modules'
 
   gulp
-  .src 'source/sass/*.sass'
+  .src 'source/sass/**/*.sass'
   .pipe compass(compassOption)
   .on 'error', handleErrors
   .pipe minifyCSS()
