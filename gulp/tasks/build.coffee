@@ -12,12 +12,12 @@ isGzip = gutil.env.gzip?
 # 監視を行わないビルドタスク
 gulp.task 'build', ->
 
-  defaultBuildTask = ['library', 'imagemin', 'jade', 'compass', 'browserify']
+  defaultBuildTask = ['library_js', 'library_css', 'imagemin', 'jade', 'compass', 'browserify']
 
   # 本番用
   if isProduction
 
-    afterBuildTask = ['sitemap', 'usemin']
+    afterBuildTask = []
 
     # ビルドディレクトリのクリーンと、bowerのvendorを準備したあとに
     # JavaScriptライブラリの準備、画像のコピー最適化、HTML, CSS, JavaScriptのコンパイルを行う

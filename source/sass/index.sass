@@ -1,13 +1,46 @@
+@import "compass/css3"
 @import "color"
 
+.main-visual
+  $bg: '/image/main/image_sp.jpg'
+  width: 100%
+  padding-top: 673 / 1300 * 100%
+  background: url($bg) top center no-repeat
+  +box-sizing(border-box)
+  +background-size(cover)
 
-//header, footer
-  padding: 30px 0
-  background-color: #999
+.step-01
+  $bg: '/image/bg/paper_texture.png'
+  background: url($bg) top center no-repeat
+  +background-size(cover)
+  color: #2a2830
+  .sub-title
+    color: #8e6d43
+.step-02
+  background-color: #e6ded6
+  color: #2a2830
+  .sub-title
+    color: #8e6d43
+.step-03
+  $bg: '/image/index/bg_step_03.jpg'
+  background: url($bg) top center no-repeat
+  +background-size(cover)
   color: #fff
+.step-04
+  $bg: '/image/index/bg_step_04_no.jpg'
+  width: 100%
+  background: url($bg) top center no-repeat
+  color: #fff
+  +background-size(cover)
 
+.h-500
+  height: 500px
+.h-400
+  height: 400px
 
+.ph-60
+  padding: 60px 0
 
-.section-border
-  border: 1px solid #444
-  padding: 32px 22px
+.description
+  font-size: 150%
+  line-height: 2em

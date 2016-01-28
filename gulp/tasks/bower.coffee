@@ -3,37 +3,28 @@ gulp = require 'gulp'
 
 gulp.task 'bower', ->
 
-  # angular
-  gulp
-  .src 'bower_components/angular/angular.min.js'
-  .pipe gulp.dest('vendor_bower/angular/')
-
-  # bootstrap-sass
-  gulp
-  .src 'bower_components/bootstrap-sass-official/vendor/assets/**'
-  .pipe gulp.dest('vendor_bower/bootstrap/')
+  dirPath = 'bower_components/**/'
 
   # jquery
   gulp
-  .src 'bower_components/jquery/dist/jquery.min.js'
+  .src dirPath + 'jquery.min.js'
   .pipe gulp.dest('vendor_bower/jquery/')
 
   # jquery.easing
   gulp
-  .src 'bower_components/jquery.easing/js/jquery.easing.min.js'
+  .src dirPath + 'jquery.easing.min.js'
   .pipe gulp.dest('vendor_bower/jquery.easing/')
-
-  # lodash
-  gulp
-  .src 'bower_components/lodash/dist/lodash.min.js'
-  .pipe gulp.dest('vendor_bower/lodash/')
-
-  # modernizr
-  gulp
-  .src 'bower_components/modernizr/modernizr.js'
-  .pipe gulp.dest('vendor_bower/modernizr/')
 
   # moment
   gulp
-  .src 'bower_components/moment/min/moment.min.js'
+  .src dirPath + 'moment.min.js'
   .pipe gulp.dest('vendor_bower/moment/')
+
+  # material design lite
+  gulp
+  .src dirPath + 'material.min.js'
+  .pipe gulp.dest('vendor_bower/material-design-lite/')
+
+  gulp
+  .src dirPath + 'material.min.css'
+  .pipe gulp.dest('vendor_bower/material-design-lite/')

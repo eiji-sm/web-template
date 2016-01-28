@@ -21,5 +21,5 @@ gulp.task 'browserify', ->
   .on 'error', handleErrors
   .pipe rename('index.js')
   .pipe uglify(mangle: false)
-  .pipe gulp.dest('public')
+  .pipe gulp.dest('public/static/')
 

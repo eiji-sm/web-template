@@ -1,36 +1,27 @@
-
-@import "compass/reset"
+@import "compass/css3"
 @import 'modules/color'
-@import 'header'
-
+@import 'components/header'
+@import 'components/footer'
 
 
 body
-  margin: 0
-  line-height: 1.4
+  font-family: "ff-tisa-web-pro",serif
 
-h1
-  font
-  margin: 0
+h1, h2, h3, h4, h5, h6, footer
+  font-family: "azo-sans-web",serif
 
-h2
-  font-size: 28px
-  margin-bottom: 24px
+.mdl-grid
+  max-width: 1140px
 
-h3
-  font-size: 20px
-  margin-bottom: 24px
+footer
+  padding: 30px
+  background-color: #2B2B2B
 
-a
-  color: inherit
+.mdl-layout__header
+  padding: 28px 0
 
-
-.container
-  margin: 0 auto
-
-.mt-30
-  margin-top: 30px
-
-
-
-@import 'footer'
+nav
+  background: none
+  
+img
+  max-width: 100%

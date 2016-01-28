@@ -5,6 +5,7 @@ handleErrors = require '../utils/handle_errors'
 prefixer = require 'gulp-autoprefixer'
 
 # Sass(compass)のコンパイルとminify
+# TODO: 重い
 gulp.task 'compass', ->
   compassOption =
     css: 'public'
@@ -17,4 +18,4 @@ gulp.task 'compass', ->
   .pipe compass(compassOption)
   .on 'error', handleErrors
   .pipe minifyCSS()
-  .pipe gulp.dest('public')
+  .pipe gulp.dest('public/static/')

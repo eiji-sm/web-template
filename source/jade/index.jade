@@ -1,94 +1,60 @@
 extends component/_layout
 
 block title
-  title Clip
+  title airpost
 
 
 block container
 
-    section#top
-      .container
-        img.responsive-img(src="/header_bg.jpg", alt="")
-    section#news
-      .container
-        .row.section-border
-          .col.s6
-            h2 タイトル
-            dl.row
-              dt.news-time.col.s4
-                time 2032/33/332
-              dd.col.s8 テキストが入ります
-              dt.news-time.col.s4
-                time 2032/33/332
-              dd.col.s8 テキストが入ります
-              dt.news-time.col.s4
-                time 2032/33/332
-              dd.col.s8 テキストが入ります
-              dt.news-time.col.s4
-                time 2032/33/332
-              dd.col.s8 テキストが入ります
-              dt.news-time.col.s4
-                time 2032/33/332
-              dd.col.s8 テキストが入ります
-          .col.s6.row
-            .col.s6
-              img.responsive-img(src="/header_bg.jpg", alt="")
-            .col.s6
-              img.responsive-img(src="/header_bg.jpg", alt="")
+  main
+    #mainVisual.main-visual
+      //h1.title Send your videos as a real postcard in the mail
 
-    section#userVoice
-      .container
-        .row.section-border
-          h2 タイトル
-          .row
-            .col.m3.s6
-              figure
-                img.responsive-img(src="/header_bg.jpg", alt="")
-                figcaption
-                  p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            .col.m3.s6
-              figure
-                img.responsive-img(src="/header_bg.jpg", alt="")
-                figcaption
-                  p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            .col.m3.s6
-              figure
-                img.responsive-img(src="/header_bg.jpg", alt="")
-                figcaption
-                  p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            .col.m3.s6
-              figure
-                img.responsive-img(src="/header_bg.jpg", alt="")
-                figcaption
-                  p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-    section#message
-      .container
-        h2 タイトル
-        .row.mt-30
-          .col.s4
-            h3 テキスト
-            p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          .col.s4
-            h3 テキスト
-            p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          .col.s4
-            h3 テキスト
-            p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-    section#consultant
-      .container
-        .row
-          .col.s6
-            h2 タイトル
-            p.
-              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            a.btn(href="#") 詳しく見る
-          .col.s6.row
-            img.responsive-img(src="/header_bg.jpg", alt="")
-            .col.s4
-              img.responsive-img(src="/header_bg.jpg", alt="")
-            .col.s4
-              img.responsive-img(src="/header_bg.jpg", alt="")
-            .col.s4
-              img.responsive-img(src="/header_bg.jpg", alt="")
+    section#step1.step-01
+      .mdl-grid.mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--2-col.mdl-cell--1-col-tablet
+        .mdl-cell.mdl-cell--4-col.mdl-cell--3-col-tablet.mdl-cell--2-col-phone.mdl-typography--text-center
+          .ph-60
+            a(href='#', target='_blank'): img(src='/image/button/store_android.png')
+        .mdl-cell.mdl-cell--4-col.mdl-cell--3-col-tablet.mdl-cell--2-col-phone.mdl-typography--text-center
+          .ph-60
+            a(href='#', target='_blank'): img(src='/image/button/store_ios.png')
+        .mdl-cell.mdl-cell--2-col.mdl-cell--1-col-tablet
+
+        .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--2-col-phone.mdl-cell--bottom.mdl-typography--text-center
+          img(src='/image/index/image_step_01.png')
+        .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--2-col-phone.mdl-cell--middle
+          h2.sub-title Record Your Moment
+          p.description.
+            Use Airpost to create video clips or import videos
+            from Instagram, Vine, Facebook, Spark or your Camera Roll.
+
+    section#step2.step-02
+      .mdl-grid.mdl-grid--no-spacing.h-500
+        .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--2-col-phone.mdl-cell--middle
+          h2.sub-title Make a video postcard
+          p.description.
+            Put your video moments on a real postcard
+            you can watch using the Airpost app.
+        .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--2-col-phone.position-relative.mdl-cell--bottom.mdl-typography--text-center
+          img(src='/image/index/image_step_02.png')
+
+    section#step3.step-03
+      .mdl-grid.mdl-grid--no-spacing.h-400
+        .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--2-col-phone.mdl-cell--bottom.mdl-typography--text-center
+          img(src='/image/index/image_step_03.png')
+        .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--2-col-phone.mdl-cell--middle
+          h2.sub-title We’ll send it for you!
+          p.description.
+            Send Airpost cards right from your smartphone.<br>
+            No stamps. No post office. No problem.
+
+    section#step4.step-04
+      .mdl-grid.mdl-grid--no-spacing.h-400
+        .mdl-cell.mdl-cell--12-col.mdl-cell--8-col-tablet.mdl-cell--middle.mdl-cell--4-col-phone.mdl-typography--text-center
+          h2.sub-title Send Airpost cards for any occasion
+          p.description.
+            Make special moments even more special with Airpost.<br>
+            Our cards are printed on high quality cardstock and usually arrive within 1 week.
+
+

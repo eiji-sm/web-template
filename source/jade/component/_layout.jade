@@ -11,33 +11,33 @@ html(lang="ja")
         //- link(rel="shortcut icon", href="favicon.ico")
 
       block viewport
-        meta(name="viewport", content="width=device-width")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 
       //- load common assets
-      link(rel='stylesheet', href='materialize.css')
-      link(rel='stylesheet', href='common.css')
-      script(src='lib.js')
-
+      link(rel='stylesheet', href='/static/lib.css')
+      link(rel='stylesheet', href='/static/common.css')
 
       block pageCSS
-        // build:css style.css
-        link(rel='stylesheet', href='index.css')
-        // endbuild
+        link(rel='stylesheet', href='/static/index.css')
 
   body
-    //- ヘッダー
-    block header
-      include _header
+    .mdl-layout.mdl-js-layout
+      //- ヘッダー
+      block header
+        include _header
 
-    block container
+      block container
 
-    //- フッター
-    block footer
-      include _footer
+      //- フッター
+      block footer
+        include _footer
 
+    //- JavaScripts
+    script(src='/static/lib.js')
+    script(src='https://use.typekit.net/rim0ieh.js')
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
     block pageJS
-      // build:js script.min.js
-      script(src='index.js')
-      // endbuild
+      script(src='/static/index.js')
 

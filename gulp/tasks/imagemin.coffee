@@ -10,6 +10,6 @@ gulp.task 'imagemin', ->
     use: [pngcrush()]
 
   gulp
-  .src 'source/image/*'
+  .src 'source/image/**/*'
   .pipe imagemin(imageminOption)
-  .pipe gulp.dest('public')
+  .pipe gulp.dest('public/image/')
