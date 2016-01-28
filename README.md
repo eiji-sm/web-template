@@ -53,3 +53,7 @@ gulpの処理を登録します。
 
 BowerのリストにないJavaScriptライブラリを入れます。
 
+# フレームワークについて
+Google Material Design Liteを使っています。
+[http://www.getmdl.io/index.html](http://www.getmdl.io/index.html)
+
